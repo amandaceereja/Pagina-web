@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "http-server . -c-1 -p 5500",
+    "dev": "http-server -p 5500 -c-1 .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "playwright test",
-    "test:ui": "playwright test --ui",
-    "lint": "eslint . --ext .js,.ts",
-    "format": "prettier . --write"
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
@@ -18,4 +21,3 @@
     "prettier": "^3.6.2"
   }
 }
-
