@@ -1,0 +1,35 @@
+# dependencias
+node_modules/
+
+# builds / artefactos
+dist/
+build/
+.tmp/
+.temp/
+.out/
+
+# tests / Playwright
+coverage/
+test-results/
+playwright-report/
+blob-report/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# variables de entorno
+.env
+.env.*.local
+
+# IDE/Editor
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

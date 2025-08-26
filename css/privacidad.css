@@ -1,0 +1,259 @@
+/* ===== Variables base (alineadas con tu estilo) ===== */
+:root {
+    --bg: #0a0a0a;
+    --surface: #101010;
+    --fg: #f5f5f5;
+    --muted: #bdbdbd;
+    --line: #222;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .45);
+    --accent: #ffffff;
+    /* blanco para contraste */
+}
+
+/* ===== Reset mínimo y tipografías ===== */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, Arial, sans-serif;
+    background: linear-gradient(180deg, #000 0%, var(--bg) 100%);
+    color: var(--fg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Cabecera / Pie compactos ===== */
+.policy-header,
+.policy-footer {
+    border-bottom: 1px solid var(--line);
+    background: rgba(0, 0, 0, .72);
+    backdrop-filter: blur(8px);
+}
+
+.policy-footer {
+    border-top: 1px solid var(--line);
+    border-bottom: 0;
+}
+
+.policy-container {
+    width: min(1080px, 92%);
+    margin: 0 auto;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    color: var(--fg);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+.policy {
+    width: min(900px, 92%);
+    margin: 0 auto;
+    padding: 44px 0 64px;
+}
+
+/* ===== Documento / Card ===== */
+.doc {
+    background: linear-gradient(180deg, var(--surface), #0e0e0e);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: clamp(22px, 3vw, 36px);
+    box-shadow: var(--shadow);
+}
+
+.doc-header h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(28px, 3.2vw, 40px);
+    line-height: 1.2;
+    margin: 0 0 .4rem;
+}
+
+.doc-header .meta {
+    margin: 0 0 6px;
+    color: var(--muted);
+    font-size: .95rem;
+}
+
+/* ===== ToC ===== */
+.toc {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px 14px;
+    background: #0f0f0f;
+    margin: 10px 0 18px;
+}
+
+.toc strong {
+    display: block;
+    font-weight: 700;
+    margin-bottom: .35rem;
+    color: var(--fg);
+}
+
+.toc ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.toc li {
+    margin: .2rem 0;
+}
+
+.toc a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.toc a:hover {
+    color: var(--fg);
+    text-decoration: underline;
+}
+
+/* ===== Secciones ===== */
+h2 {
+    font-size: clamp(18px, 2.2vw, 22px);
+    margin: 26px 0 10px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    font-weight: 700;
+    color: var(--fg);
+}
+
+p,
+li {
+    color: var(--muted);
+    line-height: 1.75;
+    font-size: 1rem;
+    margin: .35rem 0;
+}
+
+/* Listas con viñeta sutil */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: .4rem 0 1rem;
+}
+
+ul li {
+    position: relative;
+    padding-left: 1.1rem;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .65em;
+    width: .45rem;
+    height: .45rem;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: .9;
+}
+
+/* Enlaces */
+a {
+    color: var(--fg);
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botón reutilizable */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #0a0a0a;
+    text-decoration: none;
+    transition: transform .06s ease, box-shadow .2s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 8px 24px rgba(255, 255, 255, .12);
+    transform: translateY(-1px);
+}
+
+.btn--primary {}
+
+/* Volver */
+.back {
+    margin-top: 8px;
+}
+
+/* Footer */
+.policy-footer small {
+    color: var(--muted);
+}
+
+/* ===== Accesibilidad y focus ===== */
+:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+/* ===== Modo reduce motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* ===== Impresión ===== */
+@media print {
+    :root {
+        color-scheme: light;
+    }
+
+    body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    .policy-header,
+    .policy-footer {
+        display: none !important;
+    }
+
+    .doc {
+        background: #fff !important;
+        border-color: #ccc !important;
+        box-shadow: none !important;
+    }
+
+    h2 {
+        border-top-color: #ddd !important;
+    }
+
+    ul li::before {
+        background: #000 !important;
+    }
+
+    a {
+        color: #000 !important;
+        text-decoration: underline;
+    }
+}
