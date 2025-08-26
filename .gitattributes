@@ -1,0 +1,11 @@
+# Normaliza finales de línea: siempre LF en el repo
+* text=auto eol=lf
+
+# Si tienes scripts .bat, mantenlos en CRLF
+*.bat eol=crlf
+
+# Binarios (por claridad, Git ya los detecta)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
