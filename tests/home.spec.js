@@ -1,13 +1,27 @@
-// tests/home.spec.js
-const { test, expect } = require("@playwright/test");
+import { test, expect } from "@playwright/test";
 
-test("index carga y tiene título", async ({ page }) => {
+test("Home carga y título correcto", async ({ page }) => {
   await page.goto("/index.html");
   await expect(page).toHaveTitle(/Amanda Cereja/i);
-  await expect(page.locator("header .navbar__logo")).toBeVisible();
 });
 
-test("checklist existe y muestra el h1", async ({ page }) => {
-  await page.goto("/checklist.html");
-  await expect(page.getByRole("heading", { name: /Checklist/i })).toBeVisible();
+test("Hero y CTA visibles", async ({ page }) => {
+  await page.goto("/index.html#hero");
+  await expect(page.locator(".hero__title")).toBeVisible();
+
+  // CTA del héroe *específico* (evita el del menú)
+  const heroCta = page.locator(".hero").getByRole("link", { name: /Checklist Online/i });
+  await expect(heroCta).toBeVisible();
+});
+
+test("Navegación a Checklist funciona", async ({ page }) => {
+  await page.goto("/index.html");
+
+  // Clic sólo en el CTA del héroe
+  const heroCta = page.locator(".hero").getByRole("link", { name: /Checklist Online/i });
+  await heroCta.click();
+
+  await expect(page.locator("#checklist")).toBeVisible();
+  // opcional: confirma que terminó con el hash
+  await expect(page).toHaveURL(/#checklist$/i);
 });

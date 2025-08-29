@@ -1,64 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es-ES">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amanda Cereja | Desarrolladora Frontend</title>
 
-    <meta name="description"
-        content="Portafolio de Amanda Cereja, desarrolladora frontend especializada en Web Pages, Landing Pages y E-commerce." />
+    <meta
+      name="description"
+      content="Portafolio de Amanda Cereja, desarrolladora frontend especializada en Web Pages, Landing Pages y E-commerce."
+    />
 
     <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+
     <script src="js/scripts.js" defer></script>
+    
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Amanda Cereja | Desarrolladora Frontend" />
-    <meta property="og:description"
-        content="Portafolio de Amanda Cereja, desarrolladora frontend especializada en Web Pages, Landing Pages y E-commerce." />
+    <meta
+      property="og:description"
+      content="Portafolio de Amanda Cereja, desarrolladora frontend especializada en Web Pages, Landing Pages y E-commerce."
+    />
+    <meta property="og:url" content="https://amandaceereja.github.io/Pagina-web/" />
+    <meta property="og:image" content="https://amandaceereja.github.io/Pagina-web/img/social-share.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Amanda Cereja | Desarrolladora Frontend" />
-    <meta name="twitter:description"
-        content="Portafolio de Amanda Cereja, desarrolladora frontend especializada en Web Pages, Landing Pages y E-commerce." />
+    <meta
+      name="twitter:description"
+      content="Portafolio de Amanda Cereja, desarrolladora frontend especializada en Web Pages, Landing Pages y E-commerce."
+    />
+    <meta name="twitter:image" content="https://amandaceereja.github.io/Pagina-web/img/social-share.jpg?v=1" />
 
-    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet" />
-</head>
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="img/simplelogo.png" type="image/png" />
 
-<body>
+    <link rel="canonical" href="https://amandaceereja.github.io/Pagina-web/" />
+  </head>
+
+  <body>
     <!-- Header -->
     <header class="header">
-        <nav class="navbar" aria-label="Principal">
-            <div class="navbar__logo">
-                <a href="#hero">Amanda Cereja Diniz Alves</a>
-            </div>
-            <button type="button" class="navbar__mobile-btn" aria-label="Abrir/Cerrar menú">
-                <i class="fa fa-bars"></i>
-            </button>
-            <div class="navbar__menu">
-                <ul>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#sobre">Sobre mí</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
+      <nav class="navbar" aria-label="Principal">
+        <div class="navbar__logo">
+          <a href="#hero"><span>Amanda</span> <strong>Cereja Diniz Alves</strong></a>
+        </div>
+        <button type="button" class="navbar__mobile-btn" aria-label="Abrir/Cerrar menú"
+        aria-controls="navmenu"
+        aria-expanded="false">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="navbar__menu" id="navmenu">
+          <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#sobre">Sobre mí</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#checklist">Checklist</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!-- Hero -->
     <section id="hero" class="hero" aria-label="Inicio">
         <div class="hero__content">
-            <h1 class="hero__title">Creo Web Pages, Landing Pages y E-commerce</h1>
+            <h1 class="hero__title">
+                <span id="typer" class="typer" aria-live="polite"></span>
+            </h1>
+
             <p class="hero__subtitle">Sitios modernos, rápidos y responsive para tu negocio online.</p>
             <div class="hero__buttons">
                 <a href="#checklist" class="btn btn--primary">Checklist Online</a>
@@ -68,186 +98,207 @@
 
     <!-- Servicios -->
     <section id="servicios" class="servicios" aria-label="Servicios">
-        <div class="container">
-            <h2>Servicios</h2>
-            <div class="servicios-categoria">
-                <img src="img/servicios.jpg" alt="Servicios de diseño y desarollo web">
-            </div>
-            <div class="servicios__grid">
-                <div class="card">
-                    <h3>Web Pages</h3>
-                    <div class="webpages-gallery">
-                        <img src="img/1.png" alt="Plan Básico">
-                        <img src="img/2.png" alt="Plan Estándar">
-                        <img src="img/3.png" alt="Plan Premium">
-                        <img src="img/4.png" alt="Mantenimiento Mensual">
-                    </div>
-                    <a href="#contacto" class="btn btn--primary">Empiece hoy mismo</a>
-                </div>
-                <div class="card">
-                    <h3>Landing Pages</h3>
-                    <div class="webpages-gallery">
-                        <img src="img/5.png" alt="Plan Básico">
-                        <img src="img/6.png" alt="Plan Estándar">
-                        <img src="img/7.png" alt="Plan Premium">
-                        <img src="img/8.png" alt="Mantenimiento Mensual">
-                    </div>
-                    <a href="#contacto" class="btn btn--primary">Solicita tu presupuesto</a>
-                </div>
-                <div class="card">
-                    <h3>E-commerce</h3>
-                    <div class="webpages-gallery">
-                        <img src="img/9.png" alt="Plan Básico">
-                        <img src="img/10.png" alt="Plan Estándar">
-                        <img src="img/11.png" alt="Plan Premium">
-                        <img src="img/12.png" alt="Mantenimiento Mensual">
-                    </div>
-                    <a href="#contacto" class="btn btn--primary">Contratar este servicio</a>
-                </div>
-            </div>
+      <div class="container">
+        <h2>Servicios</h2>
+        <div class="servicios-track" aria-roledescription="carousel">
+            <article class="flyer" aria-label="Plan Básico">
+                <img src="img/servicios1.png" alt="Plan Básico" loading="lazy">
+            </article>
+
+            <article class="flyer" aria-label="Plan Estándar">
+                <img src="img/servicios2.png" alt="Plan Estándar" loading="lazy" />
+            </article>
+
+             <article class="flyer" aria-label="Plan Premium">
+                <img src="img/servicios3.png" alt="Plan Premium" loading="lazy" />
+            </article>
         </div>
+        <div class="servicios-cards">
+          <div class="card">
+            <h3>Web Pages</h3>
+            <div class="webpages-gallery">
+              <img src="img/1.png" alt="Plan Básico" loading="lazy"/>
+              <img src="img/2.png" alt="Plan Estándar" loading="lazy" />
+              <img src="img/3.png" alt="Plan Premium" loading="lazy"/>
+              <img src="img/4.png" alt="Mantenimiento Mensual" loading="lazy" />
+            </div>
+            <a href="#contacto" class="btn btn--primary">Empiece hoy mismo</a>
+          </div>
+          <div class="card">
+            <h3>Landing Pages</h3>
+            <div class="webpages-gallery">
+              <img src="img/5.png" alt="Plan Básico" loading="lazy"/>
+              <img src="img/6.png" alt="Plan Estándar" loading="lazy"/>
+              <img src="img/7.png" alt="Plan Premium" loading="lazy"/>
+              <img src="img/8.png" alt="Mantenimiento Mensual" loading="lazy"/>
+            </div>
+            <a href="#contacto" class="btn btn--primary">Solicita tu presupuesto</a>
+          </div>
+          <div class="card">
+            <h3>E-commerce</h3>
+            <div class="webpages-gallery">
+              <img src="img/9.png" alt="Plan Básico" loading="lazy"/>
+              <img src="img/10.png" alt="Plan Estándar" loading="lazy"/>
+              <img src="img/11.png" alt="Plan Premium" loading="lazy"/>
+              <img src="img/12.png" alt="Mantenimiento Mensual" loading="lazy"/>
+            </div>
+            <a href="#contacto" class="btn btn--primary">Contratar este servicio</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Checklist -->
     <section id="checklist" class="checklist" aria-label="Checklist Online">
-        <div class="container">
-            <h2>Checklist</h2>
-            <p class="checklist__subtitle muted">
-                Te preparo una propuesta a medida de tus necesidades y te devuelvo un plan realista.
-            </p>
+      <div class="container">
+        <h2>Checklist</h2>
+        <p class="checklist__subtitle muted">
+          Te preparo una propuesta a medida de tus necesidades y te devuelvo un plan realista.
+        </p>
 
-            <div class="checklist__boxes" role="group" aria-label="Checklist de pasos">
-                <div class="checklist__box">
-                    <span class="checklist__checkbox" aria-hidden="true"></span>
-                    <span class="checklist__label">Haz tu checklist online</span>
-                </div>
-                <div class="checklist__box">
-                    <span class="checklist__checkbox" aria-hidden="true"></span>
-                    <span class="checklist__label">Me lo envias y lo reviso</span>
-                </div>
-                <div class="checklist__box">
-                    <span class="checklist__checkbox" aria-hidden="true"></span>
-                    <span class="checklist__label">En menos de 24hrs tendrás un presupuesto</span>
-                </div>
-            </div>
-
-
-            <!-- CTA principal -->
-            <div class="checklist__cta" role="group" aria-label="Acción">
-                <a href="checklist.html" class="chip-cta">Empieza tu proyecto ahora</a>
-            </div>
-            <div class="checklist__grid"></div>
+        <div class="checklist__boxes" role="group" aria-label="Checklist de pasos">
+          <div class="checklist__box">
+            <span class="checklist__checkbox" aria-hidden="true"></span>
+            <span class="checklist__label">Haz tu checklist online en minutos</span>
+          </div>
+          <div class="checklist__box">
+            <span class="checklist__checkbox" aria-hidden="true"></span>
+            <span class="checklist__label">Lo reviso personalmente y preparo tu propuesta</span>
+          </div>
+          <div class="checklist__box">
+            <span class="checklist__checkbox" aria-hidden="true"></span>
+            <span class="checklist__label">En menos de 24hrs tendrás tu presupuesto listo</span>
+          </div>
         </div>
+
+        <!-- CTA principal -->
+        <div class="checklist__cta" role="group" aria-label="Acción">
+          <a href="checklist.html" class="chip-cta">Empieza tu proyecto ahora</a>
+        </div>
+        <div class="checklist__grid"></div>
+      </div>
     </section>
 
     <!-- Sobre mí -->
     <section id="sobre" class="sobre" aria-label="Sobre mí">
-        <div class="container">
-            <h2 class="sobre__title">Sobre mí</h2>
-            <div class="sobre__wrapper">
-                <div class="sobre__media">
-                    <div class="avatar-circle">
-                        <img src="img/simplelogo.png" alt="Logotipo de Amanda Cereja" />
-                    </div>
-                </div>
-
-                <div class="sobre__text">
-                    <p class="sobre__lead">
-                        Desarrolladora frontend especializada en <strong>web pages, landing pages y e-commerce</strong>.
-                        Combino <strong>diseño limpio</strong> con <strong>código eficiente</strong> para lograr
-                        velocidad,
-                        buen SEO y mayor conversión. No solo entrego una web: te acompaño con mejoras, mantenimiento y
-                        soporte
-                        continuo. <strong>Iteramos con datos reales</strong> para que tu sitio crezca y cumpla objetivos
-                        a
-                        largo plazo.
-                    </p>
-
-                    <ul class="sobre__bullets" role="list">
-                        <li>Arquitectura clara y rápida</li>
-                        <li>Mantenimiento y soporte continuo</li>
-                        <li>Decisiones guiadas por métricas</li>
-                    </ul>
-                </div>
+      <div class="container">
+        <h2 class="sobre__title">Sobre mí</h2>
+        <div class="sobre__wrapper">
+          <div class="sobre__media">
+            <div class="avatar-circle">
+              <img src="img/simplelogo.png" alt="Logotipo de Amanda Cereja" />
             </div>
+          </div>
+
+          <div class="sobre__text">
+            <p class="sobre__lead">
+              Desarrolladora frontend especializada en
+              <strong>web pages, landing pages y e-commerce</strong>. Combino
+              <strong>diseño limpio</strong> con <strong>código eficiente</strong> para lograr
+              velocidad, buen SEO y mayor conversión. No solo entrego una web: te acompaño con
+              mejoras, mantenimiento y soporte continuo.
+              <strong>Iteramos con datos reales</strong> para que tu sitio crezca y cumpla objetivos
+              a largo plazo.
+            </p>
+
+            <ul class="sobre__bullets" role="list">
+              <li>Arquitectura clara y rápida</li>
+              <li>Mantenimiento y soporte continuo</li>
+              <li>Decisiones guiadas por métricas</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
-
     <!-- Contacto -->
-    <section id="contacto" class="contato" aria-label="Contacto">
-        <div class="container">
-            <h2>Contacto</h2>
-            <p>Respondo en 24hrs</p>
-            <form id="contact-form" action="https://formspree.io/f/mandwben" method="POST">
-                <div class="form-group">
-                    <label for="nome">Nombre*</label>
-                    <input type="text" id="nome" name="nombre" required />
-                </div>
-                <div class="form-group">
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" required />
-                </div>
-                <div class="form-group">
-                    <label for="mensagem">Mensaje*</label>
-                    <textarea id="mensagem" name="mensaje" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn--primary">Enviar mensaje</button>
-                <p class="form-status" aria-live="polite"></p>
-            </form>
+    <section id="contacto" class="contacto" aria-label="Contacto">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>Respondo en 24hrs</p>
+        <form id="contact-form" action="https://formspree.io/f/mandwben" method="POST">
+          <div class="form-group">
+            <label for="nome">Nombre*</label>
+            <input type="text" id="nome" name="nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensaje*</label>
+            <textarea id="mensagem" name="mensaje" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
 
-            <div class="contato__social" aria-label="Redes sociales">
-                <a href="https://wa.me/34602614398" target="_blank" rel="noopener" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/amandaceereja/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/amandaceereja" target="_blank" rel="noopener" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
+        <div class="contato__social" aria-label="Redes sociales">
+          <a href="https://wa.me/34602614398" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/amandaceereja/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/amandaceereja"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2025 Amanda Cereja — Desarrolladora Frontend</p>
-        </div>
+      <div class="container">
+        <p>© 2025 Amanda Cereja — Desarrolladora Frontend</p>
+      </div>
     </footer>
 
     <!-- Botón volver arriba -->
     <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Botón WhatsApp flotante -->
-    <a href="https://wa.me/34602614398" class="whatsapp-button" target="_blank" rel="noopener"
-        aria-label="Abrir chat de WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a
+      href="https://wa.me/34602614398"
+      class="whatsapp-button"
+      target="_blank"
+      rel="noopener"
+      aria-label="Abrir chat de WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="https://unpkg.com/web-vitals@3/dist/web-vitals.umd.js" defer></script>
     <script>
-        (function initWebVitals() {
-            function start() {
-                if (!window.webVitals) {
-                    console.warn('[CWV] web-vitals no se cargó (CDN bloqueada o sin red).');
-                    return;
-                }
-                const log = (n, v) => console.log(`[CWV] ${n}:`, v.value, v);
-                webVitals.onLCP(v => log('LCP', v));
-                webVitals.onCLS(v => log('CLS', v));
-                if (webVitals.onFID) webVitals.onFID(v => log('FID', v)); // opcional si la API está
-                webVitals.onINP(v => log('INP', v));
-                webVitals.onTTFB(v => log('TTFB', v));
-            }
+      (function initWebVitals() {
+        function start() {
+          if (!window.webVitals) {
+            console.warn("[CWV] web-vitals no se cargó (CDN bloqueada o sin red).");
+            return;
+          }
+          const log = (n, v) => console.log(`[CWV] ${n}:`, v.value, v);
+          webVitals.onLCP((v) => log("LCP", v));
+          webVitals.onCLS((v) => log("CLS", v));
+          if (webVitals.onFID) webVitals.onFID((v) => log("FID", v)); // opcional si la API está
+          webVitals.onINP((v) => log("INP", v));
+          webVitals.onTTFB((v) => log("TTFB", v));
+        }
 
-            if (document.readyState === 'complete') start();
-            else window.addEventListener('load', start);
-        })();
+        if (document.readyState === "complete") start();
+        else window.addEventListener("load", start);
+      })();
     </script>
-    
-</body>
+  </body>
 </html>

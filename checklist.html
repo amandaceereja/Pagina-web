@@ -1,394 +1,593 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es-ES">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Checklist de Proyecto — Amanda Cereja</title>
-  
 
     <!-- Meta sharing opcional -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Checklist de Proyecto — Amanda Cereja" />
-    <meta property="og:description" content="Completa este formulario para preparar tu propuesta a medida." />
-    <meta property="og:image" content="assets/hero.jpg" />
+    <!-- Open Graph -->
+     <meta property="og:type" content="website" />
+     <meta property="og:title" content="Checklist Online — Tu propuesta a medida" />
+     <meta property="og:description" content="Completa 3 pasos y recibe un presupuesto realista en menos de 24h." />
+     <meta property="og:url" content="https://amandaceereja.github.io/Pagina-web/checklist.html" />
+     <meta property="og:image" content="https://amandaceereja.github.io/Pagina-web/img/social-share.jpg?v=1" />
+     <meta property="og:image:width" content="1200" />
+     <meta property="og:image:height" content="630" />
 
+    <!-- Twitter -->
+     <meta name="twitter:card" content="summary_large_image" />
+     <meta name="twitter:title" content="Checklist Online — Tu propuesta a medida" />
+     <meta name="twitter:description" content="Completa 3 pasos y recibe un presupuesto realista en menos de 24h." />
+     <meta name="twitter:image" content="https://amandaceereja.github.io/Pagina-web/img/social-share.jpg?v=1" />
+
+    <link rel="canonical" href="https://amandaceereja.github.io/Pagina-web/checklist.html" />    
+ 
     <!-- Aparencia navegador -->
-    <meta name="theme-color" content="#0a0a0a">
-    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="color-scheme" content="dark light" />
 
-
-    <script>document.documentElement.classList.add('js');</script>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
 
     <!-- Estilos & fuentes -->
     <link rel="stylesheet" href="css/checklist.css" />
-    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" href="img/simplelogo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- Header -->
     <header class="header">
-        <nav class="navbar" aria-label="Principal">
-            <div class="navbar__logo"><a href="index.html#hero">Amanda Cereja</a></div>
-            <button type="button" class="navbar__mobile-btn" aria-label="Abrir/Cerrar menú" aria-controls="navmenu" aria-expanded="false">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </button>
-            <div class="navbar__menu" id="navmenu">
-                <ul>
-                    <li><a href="index.html#servicios">Servicios</a></li>
-                    <li><a href="index.html#contacto">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
+      <nav class="navbar" aria-label="Principal">
+        <div class="navbar__logo"><a href="index.html#hero">Amanda Cereja</a></div>
+        <button
+          type="button"
+          class="navbar__mobile-btn"
+          aria-label="Abrir/Cerrar menú"
+          aria-controls="navmenu"
+          aria-expanded="false"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="navbar__menu" id="navmenu">
+          <ul>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!-- Contenido principal -->
     <main>
-        <div class="container">
-            <h1>Checklist Online</h1>
-            <p class="muted" style="margin-bottom: 1.5rem;">Complete el formulario para recibir una propuesta personalizada. </p>
+      <div id="checklist" class="container">
+        <h1>Checklist Online</h1>
+        <p class="muted" style="margin-bottom: 1.5rem">
+          Complete el formulario para recibir una propuesta personalizada.
+        </p>
 
-            <div class="card">
-                <!-- Barra de progreso -->
-                <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                    <div class="progress__bar" id="progressBar"></div>
+        <div class="card">
+          <!-- Barra de progreso -->
+          <div
+            class="progress"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          >
+            <div class="progress__bar" id="progressBar"></div>
+          </div>
+          <ol class="steps" aria-label="Pasos del formulario">
+            <li class="active">Datos</li>
+            <li>Objetivos</li>
+            <li>Funcionalidades</li>
+          </ol>
+
+          <!-- Estado y errores accesibles -->
+          <div id="step-errors" class="form-errors" role="alert" aria-live="assertive" hidden></div>
+          <p id="form-status" class="sr-only" role="status" aria-live="polite"></p>
+
+          <form action="https://formspree.io/f/mandwben" method="POST" id="chk" novalidate>
+            <!-- PASO 1: Datos + Contenido disponible -->
+            <fieldset class="step" data-step="1">
+              <legend class="step__title">Datos del proyecto</legend>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="nombre">Nombre y apellidos:</label>
+                  <input
+                    id="nombre"
+                    name="nombre"
+                    required
+                    autocomplete="name"
+                    autocapitalize="words"
+                    enterkeyhint="next"
+                  />
                 </div>
-                <ol class="steps" aria-label="Pasos del formulario">
-                    <li class="active">Datos</li>
-                    <li>Objetivos</li>
-                    <li>Funcionalidades</li>
-                </ol>
 
-                <!-- Estado y errores accesibles -->
-                <div id="step-errors" class="form-errors" role="alert" aria-live="assertive" hidden></div>
-                <p id="form-status" class="sr-only" role="status" aria-live="polite"></p>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    autocomplete="email"
+                    inputmode="email"
+                    spellcheck="false"
+                    autocapitalize="off"
+                    enterkeyhint="next"
+                  />
+                </div>
 
-                <form action="https://formspree.io/f/mandwben" method="POST" id="chk" novalidate>
-                    <!-- PASO 1: Datos + Contenido disponible -->
-                    <fieldset class="step" data-step="1">
-                        <legend class="step__title">Datos del proyecto</legend>
+                <div class="form-group">
+                  <label for="whatsapp">WhatsApp:</label>
+                  <input
+                    id="whatsapp"
+                    name="whatsapp"
+                    type="tel"
+                    placeholder="+34 ..."
+                    autocomplete="tel"
+                    inputmode="tel"
+                    pattern="^\+?[0-9\s().-]{7,}$"
+                    title="Introduce un teléfono válido (p. ej. +34 612 345 678)"
+                    enterkeyhint="next"
+                  />
+                </div>
 
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="nombre">Nombre y apellidos:</label>
-                                <input id="nombre" name="nombre" required autocomplete="name" autocapitalize="words" enterkeyhint="next" />
-                            </div>
+                <div class="form-group">
+                  <label for="empresa">Empresa / Marca:</label>
+                  <input id="empresa" name="empresa" />
+                </div>
 
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input id="email" name="email" type="email"  required autocomplete="email" inputmode="email" spellcheck="false" autocapitalize="off" enterkeyhint="next"/>
-                            </div>
+                <div class="form-group full">
+                  <label for="objetivo">Objetivos principales</label>
+                  <textarea
+                    id="objetivo"
+                    name="objetivo"
+                    placeholder="Ej.: blog personal, portafolio, vender online…"
+                  ></textarea>
+                </div>
+              </div>
 
-                            <div class="form-group">
-                                <label for="whatsapp">WhatsApp:</label>
-                                <input id="whatsapp" name="whatsapp" type="tel" placeholder="+34 ..." autocomplete="tel" inputmode="tel" pattern="^\+?[0-9\s().-]{7,}$"  title="Introduce un teléfono válido (p. ej. +34 612 345 678)" enterkeyhint="next" />
-                            </div>
+              <fieldset class="group full">
+                <legend>Contenidos disponibles</legend>
 
-                            <div class="form-group">
-                                <label for="empresa">Empresa / Marca:</label>
-                                <input id="empresa" name="empresa" />
-                            </div>
+                <div class="checks-grid">
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="cd_imgs"
+                      name="contenido_disponible[]"
+                      value="Carpeta con imágenes"
+                    />
+                    <label for="cd_imgs">Carpeta con imágenes profesionales definidas</label>
+                  </div>
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="cd_logo"
+                      name="contenido_disponible[]"
+                      value="Logo propio"
+                    />
+                    <label for="cd_logo">Logo</label>
+                  </div>
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="cd_paleta"
+                      name="contenido_disponible[]"
+                      value="Paleta de colores definida"
+                    />
+                    <label for="cd_paleta">Paleta de colores definida</label>
+                  </div>
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="cd_fuentes"
+                      name="contenido_disponible[]"
+                      value="Fuentes definidas"
+                    />
+                    <label for="cd_fuentes">Fuentes definidas</label>
+                  </div>
+                </div>
+              </fieldset>
 
-                            <div class="form-group full">
-                                <label for="objetivo">Objetivos principales</label>
-                                <textarea id="objetivo" name="objetivo"
-                                    placeholder="Ej.: blog personal, portafolio, vender online…"></textarea>
-                            </div>
-                        </div>
+              <div class="wizard-actions end">
+                <button class="btn btn--primary next" type="button">Siguiente</button>
+              </div>
+            </fieldset>
 
-                        <fieldset class="group full">
-                            <legend>Contenidos disponibles</legend>
+            <!-- PASO 2: Objetivos -->
+            <fieldset class="step" data-step="2">
+              <legend class="step__title">Objetivos</legend>
+              <div class="chips-columns">
+                <!-- Columna 1 -->
+                <fieldset class="group">
+                  <legend class="group__title">Web page</legend>
+                  <div class="chips">
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="wp_influencer"
+                      name="objetivo_webpage[]"
+                      value="Influencer Page"
+                    />
+                    <label class="chip" for="wp_influencer">Influencer Page</label>
 
-                            <div class="checks-grid">
-                                <div class="check">
-                                    <input type="checkbox" id="cd_imgs" name="contenido_disponible[]"
-                                        value="Carpeta con imágenes" />
-                                    <label for="cd_imgs">Carpeta con imágenes profesionales definidas</label>
-                                </div>
-                                <div class="check">
-                                    <input type="checkbox" id="cd_logo" name="contenido_disponible[]"
-                                        value="Logo propio" />
-                                    <label for="cd_logo">Logo</label>
-                                </div>
-                                <div class="check">
-                                    <input type="checkbox" id="cd_paleta" name="contenido_disponible[]"
-                                        value="Paleta de colores definida" />
-                                    <label for="cd_paleta">Paleta de colores definida</label>
-                                </div>
-                                <div class="check">
-                                    <input type="checkbox" id="cd_fuentes" name="contenido_disponible[]"
-                                        value="Fuentes definidas" />
-                                    <label for="cd_fuentes">Fuentes definidas</label>
-                                </div>
-                            </div>
-                        </fieldset>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="wp_blog"
+                      name="objetivo_webpage[]"
+                      value="Blog Personal"
+                    />
+                    <label class="chip" for="wp_blog">Blog Personal</label>
 
-                        <div class="wizard-actions end">
-                            <button class="btn btn--primary next" type="button">Siguiente</button>
-                        </div>
-                    </fieldset>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="wp_portfolio"
+                      name="objetivo_webpage[]"
+                      value="Portfólio"
+                    />
+                    <label class="chip" for="wp_portfolio">Portafolio</label>
 
-                    <!-- PASO 2: Objetivos -->
-                    <fieldset class="step" data-step="2">
-                        <legend class="step__title">Objetivos</legend>
-                        <div class="chips-columns">
-                            <!-- Columna 1 -->
-                            <fieldset class="group">
-                                <legend class="group__title">Web page</legend>
-                                <div class="chips">
-                                    <input class="chip-input" type="checkbox" id="wp_influencer"
-                                        name="objetivo_webpage[]" value="Influencer Page">
-                                    <label class="chip" for="wp_influencer">Influencer Page</label>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="wp_menuqr"
+                      name="objetivo_webpage[]"
+                      value="Menú Online y QRCode"
+                    />
+                    <label class="chip" for="wp_menuqr">Menú Online & QRCode</label>
+                  </div>
+                </fieldset>
 
-                                    <input class="chip-input" type="checkbox" id="wp_blog" name="objetivo_webpage[]"
-                                        value="Blog Personal">
-                                    <label class="chip" for="wp_blog">Blog Personal</label>
+                <!-- Columna 2 -->
+                <fieldset class="group">
+                  <legend class="group__title">Landing Page</legend>
+                  <div class="chips">
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="lp_unico"
+                      name="objetivo_landing[]"
+                      value="Venta de producto único"
+                    />
+                    <label class="chip" for="lp_unico">Venta de producto único</label>
 
-                                    <input class="chip-input" type="checkbox" id="wp_portfolio"
-                                        name="objetivo_webpage[]" value="Portfólio">
-                                    <label class="chip" for="wp_portfolio">Portafolio</label>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="lp_ebook"
+                      name="objetivo_landing[]"
+                      value="Venta de ebook online"
+                    />
+                    <label class="chip" for="lp_ebook">Venta de ebook online</label>
 
-                                    <input class="chip-input" type="checkbox" id="wp_menuqr" name="objetivo_webpage[]"
-                                        value="Menú Online y QRCode">
-                                    <label class="chip" for="wp_menuqr">Menú Online & QRCode</label>
-                                </div>
-                            </fieldset>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="lp_campana"
+                      name="objetivo_landing[]"
+                      value="Campaña publicitaria"
+                    />
+                    <label class="chip" for="lp_campana">Campaña publicitaria</label>
 
-                            <!-- Columna 2 -->
-                            <fieldset class="group">
-                                <legend class="group__title">Landing Page</legend>
-                                <div class="chips">
-                                    <input class="chip-input" type="checkbox" id="lp_unico" name="objetivo_landing[]"
-                                        value="Venta de producto único">
-                                    <label class="chip" for="lp_unico">Venta de producto único</label>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="lp_lanzamiento"
+                      name="objetivo_landing[]"
+                      value="Lanzamiento de productos"
+                    />
+                    <label class="chip" for="lp_lanzamiento">Lanzamiento de producto</label>
+                  </div>
+                </fieldset>
 
-                                    <input class="chip-input" type="checkbox" id="lp_ebook" name="objetivo_landing[]"
-                                        value="Venta de ebook online">
-                                    <label class="chip" for="lp_ebook">Venta de ebook online</label>
+                <!-- Columna 3 -->
+                <fieldset class="group">
+                  <legend class="group__title">E-commerce</legend>
+                  <div class="chips">
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="ec_tienda"
+                      name="objetivo_ecommerce[]"
+                      value="Tienda online"
+                    />
+                    <label class="chip" for="ec_tienda">Tienda online</label>
 
-                                    <input class="chip-input" type="checkbox" id="lp_campana" name="objetivo_landing[]"
-                                        value="Campaña publicitaria">
-                                    <label class="chip" for="lp_campana">Campaña publicitaria</label>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="ec_cursos"
+                      name="objetivo_ecommerce[]"
+                      value="Plataforma de cursos"
+                    />
+                    <label class="chip" for="ec_cursos">Plataforma de cursos</label>
 
-                                    <input class="chip-input" type="checkbox" id="lp_lanzamiento"
-                                        name="objetivo_landing[]" value="Lanzamiento de productos">
-                                    <label class="chip" for="lp_lanzamiento">Lanzamiento de producto</label>
-                                </div>
-                            </fieldset>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="ec_turismo"
+                      name="objetivo_ecommerce[]"
+                      value="Plataforma de turismo"
+                    />
+                    <label class="chip" for="ec_turismo">Plataforma de turismo</label>
 
-                            <!-- Columna 3 -->
-                            <fieldset class="group">
-                                <legend class="group__title">E-commerce</legend>
-                                <div class="chips">
-                                    <input class="chip-input" type="checkbox" id="ec_tienda" name="objetivo_ecommerce[]"
-                                        value="Tienda online">
-                                    <label class="chip" for="ec_tienda">Tienda online</label>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="ec_catalogo"
+                      name="objetivo_ecommerce[]"
+                      value="Catálogo ilimitado"
+                    />
+                    <label class="chip" for="ec_catalogo">Catálogo ilimitado</label>
+                  </div>
+                </fieldset>
 
-                                    <input class="chip-input" type="checkbox" id="ec_cursos" name="objetivo_ecommerce[]"
-                                        value="Plataforma de cursos">
-                                    <label class="chip" for="ec_cursos">Plataforma de cursos</label>
+                <!-- Columna 4 -->
+                <fieldset class="group">
+                  <legend class="group__title">Extras</legend>
+                  <div class="chips">
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="ex_rest"
+                      name="objetivo_extras[]"
+                      value="Restaurante"
+                    />
+                    <label class="chip" for="ex_rest">Restaurante</label>
 
-                                    <input class="chip-input" type="checkbox" id="ec_turismo"
-                                        name="objetivo_ecommerce[]" value="Plataforma de turismo">
-                                    <label class="chip" for="ec_turismo">Plataforma de turismo</label>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="ex_hotel"
+                      name="objetivo_extras[]"
+                      value="Hotel"
+                    />
+                    <label class="chip" for="ex_hotel">Hotel</label>
 
-                                    <input class="chip-input" type="checkbox" id="ec_catalogo"
-                                        name="objetivo_ecommerce[]" value="Catálogo ilimitado">
-                                    <label class="chip" for="ec_catalogo">Catálogo ilimitado</label>
-                                </div>
-                            </fieldset>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="ex_reservas"
+                      name="objetivo_extras[]"
+                      value="Plataforma de reservas"
+                    />
+                    <label class="chip" for="ex_reservas">Plataforma de reservas</label>
 
-                            <!-- Columna 4 -->
-                            <fieldset class="group">
-                                <legend class="group__title">Extras</legend>
-                                <div class="chips">
-                                    <input class="chip-input" type="checkbox" id="ex_rest" name="objetivo_extras[]"
-                                        value="Restaurante">
-                                    <label class="chip" for="ex_rest">Restaurante</label>
+                    <input
+                      class="chip-input"
+                      type="checkbox"
+                      id="ex_eventos"
+                      name="objetivo_extras[]"
+                      value="Plataforma de eventos"
+                    />
+                    <label class="chip" for="ex_eventos">Plataforma de eventos</label>
+                  </div>
+                </fieldset>
+              </div>
 
-                                    <input class="chip-input" type="checkbox" id="ex_hotel" name="objetivo_extras[]"
-                                        value="Hotel">
-                                    <label class="chip" for="ex_hotel">Hotel</label>
+              <div class="wizard-actions end">
+                <button class="btn btn--ghost prev" type="button">Anterior</button>
+                <button class="btn btn--primary next" type="button">Siguiente</button>
+              </div>
+            </fieldset>
 
-                                    <input class="chip-input" type="checkbox" id="ex_reservas" name="objetivo_extras[]"
-                                        value="Plataforma de reservas">
-                                    <label class="chip" for="ex_reservas">Plataforma de reservas</label>
+            <!-- PASO 3: Funcionalidades -->
+            <fieldset class="step" data-step="3">
+              <legend class="step__title">Funcionalidades</legend>
 
-                                    <input class="chip-input" type="checkbox" id="ex_eventos" name="objetivo_extras[]"
-                                        value="Plataforma de eventos">
-                                    <label class="chip" for="ex_eventos">Plataforma de eventos</label>
-                                </div>
-                            </fieldset>
-                        </div>
+              <fieldset class="group">
+                <legend>Selecciones solamente si tu proyecto lo necesita</legend>
+                <div class="checks-grid">
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="fx_cat_ilim"
+                      name="funcionalidades[]"
+                      value="Catálogo ilimitado"
+                    />
+                    <label for="fx_cat_ilim">Catálogo ilimitado</label>
+                  </div>
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="fx_pago"
+                      name="funcionalidades[]"
+                      value="Métodos de pago"
+                    />
+                    <label for="fx_pago">Métodos de pago</label>
+                  </div>
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="fx_cat_lim"
+                      name="funcionalidades[]"
+                      value="Catálogo limitado"
+                    />
+                    <label for="fx_cat_lim">Catálogo limitado</label>
+                  </div>
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="fx_transport"
+                      name="funcionalidades[]"
+                      value="Transportista (Correos/MRW/DHL)"
+                    />
+                    <label for="fx_transport">Transportista - Correos, MRW, DHL</label>
+                  </div>
+                </div>
+              </fieldset>
 
-                        <div class="wizard-actions end">
-                            <button class="btn btn--ghost prev" type="button">Anterior</button>
-                            <button class="btn btn--primary next" type="button">Siguiente</button>
-                        </div>
-                    </fieldset>
+              <div class="form-grid duo">
+                <div class="form-group">
+                  <label for="paginas">Páginas / Secciones necesarias:</label>
+                  <input
+                    id="paginas"
+                    name="paginas"
+                    placeholder="Ej.: Inicio, Servicios, Contacto, FAQ…"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="idiomas">Idiomas:</label>
+                  <input id="idiomas" name="idiomas" placeholder="Ej.: ES, EN, PT…" />
+                </div>
+              </div>
 
-                    <!-- PASO 3: Funcionalidades -->
-                    <fieldset class="step" data-step="3">
-                        <legend class="step__title">Funcionalidades</legend>
-
-                        <fieldset class="group">
-                            <legend>Selecciones solamente si tu proyecto lo necesita</legend>
-                            <div class="checks-grid">
-                                <div class="check">
-                                    <input type="checkbox" id="fx_cat_ilim" name="funcionalidades[]"
-                                        value="Catálogo ilimitado" />
-                                    <label for="fx_cat_ilim">Catálogo ilimitado</label>
-                                </div>
-                                <div class="check">
-                                    <input type="checkbox" id="fx_pago" name="funcionalidades[]"
-                                        value="Métodos de pago" />
-                                    <label for="fx_pago">Métodos de pago</label>
-                                </div>
-                                <div class="check">
-                                    <input type="checkbox" id="fx_cat_lim" name="funcionalidades[]"
-                                        value="Catálogo limitado" />
-                                    <label for="fx_cat_lim">Catálogo limitado</label>
-                                </div>
-                                <div class="check">
-                                    <input type="checkbox" id="fx_transport" name="funcionalidades[]"
-                                        value="Transportista (Correos/MRW/DHL)" />
-                                    <label for="fx_transport">Transportista - Correos, MRW, DHL</label>
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <div class="form-grid duo">
-                            <div class="form-group">
-                                <label for="paginas">Páginas / Secciones necesarias:</label>
-                                <input id="paginas" name="paginas"
-                                    placeholder="Ej.: Inicio, Servicios, Contacto, FAQ…" />
-                            </div>
-                            <div class="form-group">
-                                <label for="idiomas">Idiomas:</label>
-                                <input id="idiomas" name="idiomas" placeholder="Ej.: ES, EN, PT…" />
-                            </div>
-                        </div>
-
-                        <fieldset class="group">
-                            <legend>Seleccione si ya tienes Dominio o Hosting:</legend>
-                            <div class="domain-hosting">
-                                <div class="dh-item">
-                                    <div class="dh-field">
-                                        <fieldset>
-                                            <legend>Dominio</legend>
-                                            <label class="radio">
-                                                <input type="radio" name="dominio" value="Si"> <span>Sí</span>
-                                            </label>
-                                            <label class="radio">
-                                                <input type="radio" name="dominio" value="No"> <span>No</span>
-                                            </label>
-                                        </fieldset>
-                                    </div>
-                                    <p class="dh-help">Es la dirección de tu web en internet, es tu identidad digital.<br>www.(tudominio).com
-                                    </p>
-                                </div>
-                        
-                                <div class="dh-item">
-                                    <div class="dh-field">
-                                        <fieldset>
-                                            <legend>Hosting</legend>
-                                            <label class="radio">
-                                                <input type="radio" name="hosting" value="Si"> <span>Sí</span>
-                                            </label>
-                                            <label class="radio">
-                                                <input type="radio" name="hosting" value="No"> <span>No</span>
-                                            </label>
-                                        </fieldset>
-                                    </div>
-                                    <p class="dh-help">Es el servidor donde tu web estará guardada y funcionando 24/7.</p>
-                                </div>
-                            </div>
-                        </fieldset>
-
-
-                        <fieldset class="group">
-                            <legend>Siguientes pasos</legend>
-                            <div class="checks-grid">
-                                <div class="check">
-                                    <input type="checkbox" id="sp_whatsapp" name="siguientes_pasos[]"
-                                        value="Mensaje por WhatsApp"/>
-                                    <label for="sp_whatsapp">Envíame un mensaje vía WhatsApp para acceder a más informaciones</label>
-                                </div>
-                                <div class="check">
-                                    <input type="checkbox" id="sp_pdf" name="siguientes_pasos[]"
-                                        value="Me gustaría recibir PDF con informaciones" />
-                                    <label for="sp_pdf">Me gustaría recibir vía email un PDF informativo según mis necesidades</label>
-                                </div>
-                                <div class="check">
-                                    <input type="checkbox" id="sp_videollamada" name="siguientes_pasos[]"
-                                        value="Quiero agendar una videollamada" />
-                                    <label for="sp_videollamada">Quiero agendar una reunión por videollamada</label>
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <div class="rgpd-row">
-                            <input type="checkbox" id="rgpd" name="rgpd" value="acepto" required />
-                            <label for="rgpd" class="muted">
-                                Acepto la
-                                <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>
-                                y el tratamiento de mis datos para recibir una propuesta.
-                            </label>
-                        </div>
-                        
-                        <div class="wizard-actions end">
-                            <button class="btn btn--ghost prev" type="button">Anterior</button>
-                            <button class="btn btn--primary" type="submit">Enviar checklist</button>
-                        </div>
-                    </fieldset>
-
-                    <!--campos ocultos de tracking -->
-                    <input type="hidden" name="utm_source" id="utm_source">
-                    <input type="hidden" name="utm_medium" id="utm_medium">
-                    <input type="hidden" name="utm_campaign" id="utm_campaign">
-                    <input type="hidden" name="referrer" id="referrer">
-
-
-                    <!-- Honeypot anti-spam -->
-                    <input type="text" name="_gotcha" hidden />
-                </form>
-
-                <div id="form-success" class="form-success" role="status" aria-live="polite" hidden>
-                    <h2>¡Gracias! ✅</h2>
-                    <p>Tu checklist se envió con éxito. Te contactaré en breve.</p>
-                    <div class="wizard-actions end">
-                        <a href="index.html" class="btn btn--primary">Volver al inicio</a>
-                        <button type="button" id="send-another" class="btn btn--ghost">Enviar otro</button>
+              <fieldset class="group">
+                <legend>Seleccione si ya tienes Dominio o Hosting:</legend>
+                <div class="domain-hosting">
+                  <div class="dh-item">
+                    <div class="dh-field">
+                      <fieldset>
+                        <legend>Dominio</legend>
+                        <label class="radio">
+                          <input type="radio" name="dominio" value="Si" /> <span>Sí</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="dominio" value="No" /> <span>No</span>
+                        </label>
+                      </fieldset>
                     </div>
+                    <p class="dh-help">
+                      Es la dirección de tu web en internet, es tu identidad digital.<br />www.(tudominio).com
+                    </p>
+                  </div>
+
+                  <div class="dh-item">
+                    <div class="dh-field">
+                      <fieldset>
+                        <legend>Hosting</legend>
+                        <label class="radio">
+                          <input type="radio" name="hosting" value="Si" /> <span>Sí</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="hosting" value="No" /> <span>No</span>
+                        </label>
+                      </fieldset>
+                    </div>
+                    <p class="dh-help">
+                      Es el servidor donde tu web estará guardada y funcionando 24/7.
+                    </p>
+                  </div>
                 </div>
-                
+              </fieldset>
+
+              <fieldset class="group">
+                <legend>Siguientes pasos</legend>
+                <div class="checks-grid">
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="sp_whatsapp"
+                      name="siguientes_pasos[]"
+                      value="Mensaje por WhatsApp"
+                    />
+                    <label for="sp_whatsapp"
+                      >Envíame un mensaje vía WhatsApp para acceder a más informaciones</label
+                    >
+                  </div>
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="sp_pdf"
+                      name="siguientes_pasos[]"
+                      value="Me gustaría recibir PDF con informaciones"
+                    />
+                    <label for="sp_pdf"
+                      >Me gustaría recibir vía email un PDF informativo según mis necesidades</label
+                    >
+                  </div>
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="sp_videollamada"
+                      name="siguientes_pasos[]"
+                      value="Quiero agendar una videollamada"
+                    />
+                    <label for="sp_videollamada">Quiero agendar una reunión por videollamada</label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="rgpd-row">
+                <input type="checkbox" id="rgpd" name="rgpd" value="acepto" required />
+                <label for="rgpd" class="muted">
+                  Acepto la
+                  <a href="privacidad.html" target="_blank" rel="noopener"
+                    >política de privacidad</a
+                  >
+                  y el tratamiento de mis datos para recibir una propuesta.
+                </label>
+              </div>
+
+              <div class="wizard-actions end">
+                <button class="btn btn--ghost prev" type="button">Anterior</button>
+                <button class="btn btn--primary" type="submit">Enviar checklist</button>
+              </div>
+            </fieldset>
+
+            <!--campos ocultos de tracking -->
+            <input type="hidden" name="utm_source" id="utm_source" />
+            <input type="hidden" name="utm_medium" id="utm_medium" />
+            <input type="hidden" name="utm_campaign" id="utm_campaign" />
+            <input type="hidden" name="referrer" id="referrer" />
+
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_gotcha" hidden />
+          </form>
+
+          <div id="form-success" class="form-success" role="status" aria-live="polite" hidden>
+            <h2>¡Gracias! ✅</h2>
+            <p>Tu checklist se envió con éxito. Te contactaré en breve.</p>
+            <div class="wizard-actions end">
+              <a href="index.html" class="btn btn--primary">Volver al inicio</a>
+              <button type="button" id="send-another" class="btn btn--ghost">Enviar otro</button>
             </div>
+          </div>
         </div>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2025 Amanda Cereja — Desarrolladora Frontend</p>
-        </div>
+      <div class="container">
+        <p>© 2025 Amanda Cereja — Desarrolladora Frontend</p>
+      </div>
     </footer>
 
     <!-- Botón volver arriba -->
     <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Botón WhatsApp flotante -->
-    <a href="https://wa.me/34602614398" class="whatsapp-button" target="_blank" rel="noopener"
-        aria-label="Abrir chat de WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a
+      href="https://wa.me/34602614398"
+      class="whatsapp-button"
+      target="_blank"
+      rel="noopener"
+      aria-label="Abrir chat de WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Scripts -->
@@ -396,15 +595,14 @@
 
     <script src="https://unpkg.com/web-vitals@3/dist/web-vitals.umd.js" defer></script>
     <script>
-        window.addEventListener('load', () => {
-            const log = (n, v) => console.log(`[CWV] ${n}:`, v.value, v);
-            webVitals.onLCP(v => log('LCP', v));
-            webVitals.onCLS(v => log('CLS', v));
-            webVitals.onFID(v => log('FID', v));
-            webVitals.onINP(v => log('INP', v));
-            webVitals.onTTFB(v => log('TTFB', v));
-        });
+      window.addEventListener("load", () => {
+        const log = (n, v) => console.log(`[CWV] ${n}:`, v.value, v);
+        webVitals.onLCP((v) => log("LCP", v));
+        webVitals.onCLS((v) => log("CLS", v));
+        webVitals.onFID((v) => log("FID", v));
+        webVitals.onINP((v) => log("INP", v));
+        webVitals.onTTFB((v) => log("TTFB", v));
+      });
     </script>
-</body>
-
+  </body>
 </html>
